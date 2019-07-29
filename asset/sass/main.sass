@@ -1,7 +1,49 @@
+//@import ../bootstrap/scss/_variables.scss
 $main-color: #4c4c4c
 $main-bg: #eceeef
-
+$container-bg: #fafafa
 
 .body
   background-color: $main-bg
   color: $main-color
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+.container
+    border-left: 1px solid #eceeef
+    border-right: 1px solid #eceeef
+    box-shadow: 0 2px 8px rgba(0,0,0,.07)
+    min-height: 100vh
+
+.tree
+  font-size: 1.3rem
+  list-style-type: none
+  padding-inline-start: 0px
+  ul
+    list-style-type: none
+    display: block
+    &.collapsed
+      display: none
+  a
+    color: #484848
+    i
+      font-size: 1.1rem
+      padding: .3rem
+      cursor: pointer
+      &.fa-plus
+        color: #6f42c1
+      &.fa-minus
+        color: #a2a2a2
+.content
+  .step
+    margin-bottom: 2rem
+    position: relative
+    .counter
+      position: absolute
+      font-size: 1.75rem
+    .header
+      margin-left: 60px
+      font-size: 1.75rem
+    .content
+      margin-left: 60px

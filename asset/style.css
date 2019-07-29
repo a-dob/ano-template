@@ -3,4 +3,61 @@
   color: #4c4c4c;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  border-left: 1px solid #eceeef;
+  border-right: 1px solid #eceeef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  min-height: 100vh;
+}
+
+.tree {
+  font-size: 1.3rem;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+.tree ul {
+  list-style-type: none;
+  display: block;
+}
+.tree ul.collapsed {
+  display: none;
+}
+.tree a {
+  color: #484848;
+}
+.tree a i {
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.tree a i.fa-plus {
+  color: #6f42c1;
+}
+.tree a i.fa-minus {
+  color: #a2a2a2;
+}
+
+.content .step {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.content .step .counter {
+  position: absolute;
+  font-size: 1.75rem;
+}
+.content .step .header {
+  margin-left: 60px;
+  font-size: 1.75rem;
+}
+.content .step .content {
+  margin-left: 60px;
+}
+
 /*# sourceMappingURL=style.css.map */
