@@ -113,19 +113,30 @@
     return prefix;
   };
 
-  var getSelectorFromElement = function getSelectorFromElement(element) {
+  var getSelector = function getSelector(element) {
     var selector = element.getAttribute('data-target');
 
     if (!selector || selector === '#') {
       var hrefAttr = element.getAttribute('href');
-      selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
+      selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
     }
 
-    try {
+    return selector;
+  };
+
+  var getSelectorFromElement = function getSelectorFromElement(element) {
+    var selector = getSelector(element);
+
+    if (selector) {
       return document.querySelector(selector) ? selector : null;
-    } catch (error) {
-      return null;
     }
+
+    return null;
+  };
+
+  var getElementFromSelector = function getElementFromSelector(element) {
+    var selector = getSelector(element);
+    return selector ? document.querySelector(selector) : null;
   };
 
   var getTransitionDurationFromElement = function getTransitionDurationFromElement(element) {
@@ -882,12 +893,7 @@
     ;
 
     _proto._getRootElement = function _getRootElement(element) {
-      var selector = getSelectorFromElement(element);
-      var parent = false;
-
-      if (selector) {
-        parent = SelectorEngine.findOne(selector);
-      }
+      var parent = getElementFromSelector(element);
 
       if (!parent) {
         parent = SelectorEngine.closest(element, "." + ClassName.ALERT);
@@ -1792,13 +1798,7 @@
     };
 
     Carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
-      var selector = getSelectorFromElement(this);
-
-      if (!selector) {
-        return;
-      }
-
-      var target = SelectorEngine.findOne(selector);
+      var target = getElementFromSelector(this);
 
       if (!target || !target.classList.contains(ClassName$2.CAROUSEL)) {
         return;
@@ -2093,15 +2093,11 @@
       if (triggerArrayLength > 0) {
         for (var i = 0; i < triggerArrayLength; i++) {
           var trigger = this._triggerArray[i];
-          var selector = getSelectorFromElement(trigger);
+          var elem = getElementFromSelector(trigger);
 
-          if (selector !== null) {
-            var elem = SelectorEngine.findOne(selector);
-
-            if (!elem.classList.contains(ClassName$3.SHOW)) {
-              trigger.classList.add(ClassName$3.COLLAPSED);
-              trigger.setAttribute('aria-expanded', false);
-            }
+          if (elem && !elem.classList.contains(ClassName$3.SHOW)) {
+            trigger.classList.add(ClassName$3.COLLAPSED);
+            trigger.setAttribute('aria-expanded', false);
           }
         }
       }
@@ -2168,8 +2164,7 @@
 
       var selector = "[data-toggle=\"collapse\"][data-parent=\"" + parent + "\"]";
       makeArray(SelectorEngine.find(selector, parent)).forEach(function (element) {
-        var selector = getSelectorFromElement(element);
-        var selected = selector ? SelectorEngine.findOne(selector) : null;
+        var selected = getElementFromSelector(element);
 
         _this3._addAriaAndCollapsedClass(selected, [element]);
       });
@@ -2704,14 +2699,7 @@
     };
 
     Dropdown._getParentFromElement = function _getParentFromElement(element) {
-      var parent;
-      var selector = getSelectorFromElement(element);
-
-      if (selector) {
-        parent = SelectorEngine.findOne(selector);
-      }
-
-      return parent || element.parentNode;
+      return getElementFromSelector(element) || element.parentNode;
     };
 
     Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
@@ -3382,8 +3370,7 @@
   EventHandler.on(document, Event$6.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
     var _this10 = this;
 
-    var selector = getSelectorFromElement(this);
-    var target = SelectorEngine.findOne(selector);
+    var target = getElementFromSelector(this);
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
@@ -4370,10 +4357,6 @@
       return this.getTitle() || this._getContent();
     };
 
-    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-      this.getTipElement().classList.add(CLASS_PREFIX$1 + "-" + attachment);
-    };
-
     _proto.setContent = function setContent() {
       var tip = this.getTipElement(); // we use append for html objects to maintain js events
 
@@ -4388,6 +4371,10 @@
       this.setElementContent(SelectorEngine.findOne(Selector$7.CONTENT, tip), content);
       tip.classList.remove(ClassName$7.FADE);
       tip.classList.remove(ClassName$7.SHOW);
+    };
+
+    _proto._addAttachmentClass = function _addAttachmentClass(attachment) {
+      this.getTipElement().classList.add(CLASS_PREFIX$1 + "-" + attachment);
     } // Private
     ;
 
@@ -4873,10 +4860,9 @@
         return;
       }
 
-      var target;
       var previous;
+      var target = getElementFromSelector(this._element);
       var listElement = SelectorEngine.closest(this._element, Selector$9.NAV_LIST_GROUP);
-      var selector = getSelectorFromElement(this._element);
 
       if (listElement) {
         var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector$9.ACTIVE_UL : Selector$9.ACTIVE;
@@ -4898,10 +4884,6 @@
 
       if (showEvent.defaultPrevented || hideEvent !== null && hideEvent.defaultPrevented) {
         return;
-      }
-
-      if (selector) {
-        target = SelectorEngine.findOne(selector);
       }
 
       this._activate(this._element, listElement);

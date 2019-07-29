@@ -160,10 +160,6 @@
       return this.getTitle() || this._getContent();
     };
 
-    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-      this.getTipElement().classList.add(CLASS_PREFIX + "-" + attachment);
-    };
-
     _proto.setContent = function setContent() {
       var tip = this.getTipElement(); // we use append for html objects to maintain js events
 
@@ -178,6 +174,10 @@
       this.setElementContent(SelectorEngine.findOne(Selector.CONTENT, tip), content);
       tip.classList.remove(ClassName.FADE);
       tip.classList.remove(ClassName.SHOW);
+    };
+
+    _proto._addAttachmentClass = function _addAttachmentClass(attachment) {
+      this.getTipElement().classList.add(CLASS_PREFIX + "-" + attachment);
     } // Private
     ;
 
