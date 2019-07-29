@@ -50,14 +50,22 @@ a:hover {
 }
 .content .step .counter {
   position: absolute;
-  font-size: 1.75rem;
+  font-size: 1.34rem;
 }
 .content .step .header {
   margin-left: 60px;
   font-size: 1.75rem;
+  font-weight: 700;
 }
 .content .step .content {
   margin-left: 60px;
+}
+
+.factory {
+  cursor: pointer;
+}
+.factory.active {
+  background-color: #6f42c114;
 }
 
 /*# sourceMappingURL=style.css.map */
