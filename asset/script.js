@@ -3,18 +3,28 @@ $(document).ready(function(){
   //подсветка найденных совпадений
   function highlightOverlap(needle, content){
       regexp = new RegExp(needle, "ig");
-      newContent = content.replace(regexp, '<span class="lightOn">' + needle + '</span>');
-      //newContent = '<i class="fa fa-plus" aria-hidden="true"></i>' + newContent;
-      return newContent;
+      str = content.replace(regexp, '<span class="lightOn">' + needle + '</span>');
+      if (!str) return str;
+      if(str[0] == '<'){
+        console.log(str[27].toUpperCase());
+        return str.replace('#lightOn\">.{1}#', 'lightOn">'+str[34].toUpperCase());
+      }
+      return str[0].toUpperCase() + str.slice(1);
   }
 
 
   var tree = $('.tree');
   var tree_link = $('.tree a');
+  var tree_icon = $('.tree i');
   var tree_ul = $('.tree ul');
+
   tree_link.on('click', function(){
     $(this).next().toggleClass( "collapsed");
     $(this).find('i').eq(0).toggleClass('fa-minus');
+  });
+  tree_icon.on('click', function(){
+    $(this).next().next().toggleClass( "collapsed");
+    $(this).toggleClass('fa-minus');
   });
 
 
@@ -45,18 +55,18 @@ $(document).ready(function(){
   treeSearch.on('keyup', function(){
     tree_ul.addClass('collapsed');
     tree.find('i').removeClass('fa-minus');
-
-    var search = $(this).val();
+    var search = $(this).val().toLowerCase();
+    $(this).val(search);
     tree.find('a').each(function(){
-      if (~$(this).text().toLowerCase().indexOf(search.toLowerCase())){
+      $(this).html(highlightOverlap(search, $(this).text()));
+      if (~$(this).text().toLowerCase().indexOf(search)){
         $(this).parents('ul').removeClass('collapsed');
         $(this).parents('ul').each(function(){
-          $(this).parent().find('i').addClass('fa-minus');
+          $(this).parent().find('i').eq(0).addClass('fa-minus');
         });
-        $(this).html(highlightOverlap(search, $(this).text()));
-        //console.log($(this).text());
+        $(this).prev().removeClass('fa-minus');
       }
-    })
+    });
   });
 
 
