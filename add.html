@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i&display=swap&subset=cyrillic" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="asset/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="asset/style.css">
+
+  <title>АНО</title>
+</head>
+
+<body>
+  <div class="container p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Технологическая кооперация</a>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="main.html">Поиск</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="add.html">Личный кабинет</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container container-main">
+    <div class="row pt-5 px-2 ">
+      <div class="nav flex-column nav-pills col-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home1-tab" data-toggle="pill" href="#v-pills-home1" role="tab" aria-controls="v-pills-home1" aria-selected="true">О компании</a>
+        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Добавление ресурсов</a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Текущие ресурсы</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Активные заявки</a>
+        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Новые заявки</a>
+      </div>
+      <div class="tab-content col-9" id="v-pills-tabContent">
+        <div class="tab-pane fade show" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home1-tab">
+          <div class="col content">
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          <div class="col content">
+            <div class="col step">
+              <div class="counter">
+                01.
+              </div>
+              <div class="header">
+                <h4>Основные параметры</h4>
+              </div>
+              <div class="content">
+                <form>
+                  <div class="form-group row mb-2">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Наименование ресурса</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Название">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Ширина изделия</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Ширина изделия">
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Введите ширину изделия в <strong>миллиметрах</strong>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Высота изделия</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Высота изделия">
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Введите высоту изделия в <strong>миллиметрах</strong>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Материал изделия</label>
+                    <div class="col-sm-8">
+                      <select class="custom-select">
+                        <option selected>...</option>
+                        <option value="1">Железо</option>
+                        <option value="2">Аллюминий</option>
+                        <option value="3">Титан</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="button mt-5">
+                <button type="button" name="button" class="btn btn-primary  btn-block" data-toggle="collapse" data-target="#step2">Следующий шаг</button>
+              </div>
+            </div>
+
+
+            <div class="col step">
+              <div class="counter">
+                02.
+              </div>
+              <div class="header">
+                <h4 class="text-secondary">Выбор исполнителя</h4>
+              </div>
+              <div class="collapse" id="step2">
+                <div class="content">
+
+                  <div class="card mb-3 mt-4 border-0 factory">
+                    <div class=" row no-gutters">
+                      <div class="col-md-8">
+                        <div class="card-body py-0">
+                          <h5 class="card-title">Завод точного литья</h5>
+                          <dl class="row">
+                            <dt class="col-sm-3"><small class="text-muted">Адрес:</small></dt>
+                            <dd class="col-sm-9">
+                              <p class="card-text"><small>391000, г.Рязань, р-он Южный промузел , д.6, стр.1 офис1</small></p>
+                            </dd>
+                            <dt class="col-sm-3"><small class="text-muted">ИНН:</small></dt>
+                            <dd class="col-sm-9">
+                              <p class="card-text"><small>123457895</small></p>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <img style="object-fit: contain;     height: 100%;" src="http://expert.ru/data/public/516455/516465/00000000000000000000000000000000000000000000000000.jpg" class="card-img" alt="...">
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div class="card mb-3 mt-4 border-0 factory">
+                    <div class=" row no-gutters">
+                      <div class="col-md-8">
+                        <div class="card-body py-0">
+                          <h5 class="card-title">Приборный завод</h5>
+                          <dl class="row">
+                            <dt class="col-sm-3"><small class="text-muted">Адрес:</small></dt>
+                            <dd class="col-sm-9">
+                              <p class="card-text"><small>391000, г.Рязань, р-он Южный промузел , д.6, стр.1 офис1</small></p>
+                            </dd>
+                            <dt class="col-sm-3"><small class="text-muted">ИНН:</small></dt>
+                            <dd class="col-sm-9">
+                              <p class="card-text"><small>123457895</small></p>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <img style="object-fit: contain;     height: 100%;" src="http://expert.ru/data/public/516455/516465/00000000000000000000000000000000000000000000000000.jpg" class="card-img" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </div>
+                <div class="button mt-5">
+                  <button type="button" name="button" class="btn btn-primary  btn-block" data-toggle="collapse" data-target="#step3">Следующий шаг</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col step">
+              <div class="counter">
+                03.
+              </div>
+              <div class="header">
+                <h4 class="text-secondary">Написать исполнителю</h4>
+              </div>
+              <div class="collapse" id="step3">
+                <div class="content">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Сообщение исполнителю"></textarea>
+                  </div>
+                  <div class="button mt-5">
+                    <button type="button" name="button" class="btn btn-success  btn-block">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          <div class="col">
+            2
+          </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          <div class="col">
+            3
+          </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+          <div class="col">
+            4
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="asset/script.js"></script>
+</body>
+
+</html>

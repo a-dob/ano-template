@@ -1,6 +1,6 @@
-.body {
-  background-color: #eceeef;
-  color: #4c4c4c;
+body {
+  background-color: #f9f9f9;
+  color: #4c4c4c !important;
   font-family: 'Exo 2', sans-serif; }
 
 a {
@@ -8,11 +8,15 @@ a {
   a:hover {
     text-decoration: none; }
 
-.container {
+.container-main {
   border-left: 1px solid #eceeef;
   border-right: 1px solid #eceeef;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-color: #ffffff; }
+
+nav {
+  background-color: #4b386d; }
 
 .tree {
   font-size: 1.3rem;
