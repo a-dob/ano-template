@@ -12,7 +12,11 @@ $(document).ready(function(){
       return str[0].toUpperCase() + str.slice(1);
   }
 
+  $('input[name="scales"]').click(function() {
+    if ($(this).prop('checked')) $(this).parent().find('form').show();
+    if (!$(this).prop('checked')) $(this).parent().find('form').hide();
 
+  });
   var tree = $('.tree');
   var tree_link = $('.tree a');
   var tree_icon = $('.tree i');

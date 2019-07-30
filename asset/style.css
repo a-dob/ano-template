@@ -37,6 +37,19 @@ nav {
       color: #6f42c1; }
     .tree i.fa-minus {
       color: #a2a2a2; }
+  .tree form {
+    display: none; }
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  margin: 0px -15px 15px; }
+  .jumbotron img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0; }
 
 .content .step {
   margin-bottom: 2rem;

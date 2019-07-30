@@ -36,20 +36,72 @@
     </nav>
   </div>
   <div class="container container-main">
-    <div class="row pt-5 px-2 ">
+    <div class="jumbotron jumbotron-fluid">
+      <img src="http://expert.ru/data/public/516455/516465/00000000000000000000000000000000000000000000000000.jpg" class="rounded float-right" style="background-size: cover;" alt="...">
+    </div>
+    <div class="row pt-1 px-2 ">
       <div class="nav flex-column nav-pills col-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="v-pills-home1-tab" data-toggle="pill" href="#v-pills-home1" role="tab" aria-controls="v-pills-home1" aria-selected="true">О компании</a>
-        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Добавление ресурсов</a>
+        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">Добавление ресурсов</a>
         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Текущие ресурсы</a>
-        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Активные заявки</a>
-        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Новые заявки</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Заявки</a>
+        <!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Сообщения</a> -->
       </div>
       <div class="tab-content col-9" id="v-pills-tabContent">
-        <div class="tab-pane fade show" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home1-tab">
+        <div class="tab-pane fade show active" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home1-tab">
           <div class="col content">
+            <h3>Рязанский приборный завод</h3>
+            <div class="ml-4">
+              <h5>Основная информация</h5>
+              <dl class="row">
+                <dt class="col-sm-2"><small class="text-muted">Адрес:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>391000, г.Рязань, р-он Южный промузел , д.6, стр.1 офис1</small></p>
+                </dd>
+                <dt class="col-sm-2"><small class="text-muted">Численность персонала:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>2 939 ч.</small></p>
+                </dd>
+                <dt class="col-sm-2"><small class="text-muted">ИНН:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>123457895</small></p>
+                </dd>
+                <dt class="col-sm-2"><small class="text-muted">ОГРН:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>46879165184941</small></p>
+                </dd>
+                <dt class="col-sm-2"><small class="text-muted">Телефон:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>+7 9421 58 86 48</small></p>
+                </dd>
+                <dt class="col-sm-2"><small class="text-muted">E-mail:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>example@mail.com</small></p>
+                </dd>
+              </dl>
+              <h5>Виды деятельности</h5>
+              <ul>
+                <li>Производство печатных плат</li>
+                <li>Производство медицинского оборудования</li>
+                <li>Производство сварочного оборудования</li>
+              </ul>
+              <h5>Связаться с администратором системы от предприятия</h5>
+              <dl class="row">
+                <dt class="col-sm-2"><small class="text-muted">Телефон:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>+7 9421 58 86 48</small></p>
+                </dd>
+                <dt class="col-sm-2"><small class="text-muted">E-mail:</small></dt>
+                <dd class="col-sm-10">
+                  <p class="card-text"><small>example@mail.com</small></p>
+                </dd>
+              </dl>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Сообщение администратору"></textarea>
+              <button type="button" name="button" class="btn btn-success  btn-block mt-2">Отправить</button>
+            </div>
           </div>
         </div>
-        <div class="tab-pane fade show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
           <div class="col content">
             <div class="col step">
               <div class="counter">
@@ -67,32 +119,15 @@
                     </div>
                   </div>
                   <div class="form-group row mb-2">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Ширина изделия</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Количество</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Ширина изделия">
-                      <small id="passwordHelpBlock" class="form-text text-muted">
-                        Введите ширину изделия в <strong>миллиметрах</strong>
-                      </small>
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Количество">
                     </div>
                   </div>
                   <div class="form-group row mb-2">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Высота изделия</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Ставка (рубли/час)</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Высота изделия">
-                      <small id="passwordHelpBlock" class="form-text text-muted">
-                        Введите высоту изделия в <strong>миллиметрах</strong>
-                      </small>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-2">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Материал изделия</label>
-                    <div class="col-sm-8">
-                      <select class="custom-select">
-                        <option selected>...</option>
-                        <option value="1">Железо</option>
-                        <option value="2">Аллюминий</option>
-                        <option value="3">Титан</option>
-                      </select>
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Ставка">
                     </div>
                   </div>
                 </form>
@@ -108,81 +143,161 @@
                 02.
               </div>
               <div class="header">
-                <h4 class="text-secondary">Выбор исполнителя</h4>
+                <h4 class="text-secondary">Выбор категории</h4>
               </div>
               <div class="collapse" id="step2">
                 <div class="content">
-
-                  <div class="card mb-3 mt-4 border-0 factory">
-                    <div class=" row no-gutters">
-                      <div class="col-md-8">
-                        <div class="card-body py-0">
-                          <h5 class="card-title">Завод точного литья</h5>
-                          <dl class="row">
-                            <dt class="col-sm-3"><small class="text-muted">Адрес:</small></dt>
-                            <dd class="col-sm-9">
-                              <p class="card-text"><small>391000, г.Рязань, р-он Южный промузел , д.6, стр.1 офис1</small></p>
-                            </dd>
-                            <dt class="col-sm-3"><small class="text-muted">ИНН:</small></dt>
-                            <dd class="col-sm-9">
-                              <p class="card-text"><small>123457895</small></p>
-                            </dd>
-                          </dl>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <img style="object-fit: contain;     height: 100%;" src="http://expert.ru/data/public/516455/516465/00000000000000000000000000000000000000000000000000.jpg" class="card-img" alt="...">
-                      </div>
-                    </div>
-                  </div>
-
-                  <hr />
-
-                  <div class="card mb-3 mt-4 border-0 factory">
-                    <div class=" row no-gutters">
-                      <div class="col-md-8">
-                        <div class="card-body py-0">
-                          <h5 class="card-title">Приборный завод</h5>
-                          <dl class="row">
-                            <dt class="col-sm-3"><small class="text-muted">Адрес:</small></dt>
-                            <dd class="col-sm-9">
-                              <p class="card-text"><small>391000, г.Рязань, р-он Южный промузел , д.6, стр.1 офис1</small></p>
-                            </dd>
-                            <dt class="col-sm-3"><small class="text-muted">ИНН:</small></dt>
-                            <dd class="col-sm-9">
-                              <p class="card-text"><small>123457895</small></p>
-                            </dd>
-                          </dl>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <img style="object-fit: contain;     height: 100%;" src="http://expert.ru/data/public/516455/516465/00000000000000000000000000000000000000000000000000.jpg" class="card-img" alt="...">
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
+                  <ul class="tree collapsed">
+                    <li>
+                      <i class="fa fa-plus" aria-hidden="true"></i><a href="#">Металлообработка</a>
+                      <ul class="collapsed">
+                        <li>
+                          <i class="fa fa-plus" aria-hidden="true"></i><a href="#">Плоский прокат</a>
+                          <ul class="collapsed">
+                            <li>
+                              <input type="checkbox" id="scales" name="scales"><a href="#">Деформация</a>
+                              <form>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="Длина изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите длину изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="Ширина изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите ширину изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="Высота изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите высоту изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group  row mb-2">
+                                  <div class="col-sm-8">
+                                    <select class="custom-select">
+                                      <option selected>Материал изделия</option>
+                                      <option value="1">Железо</option>
+                                      <option value="2">Аллюминий</option>
+                                      <option value="3">Титан</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="scales" name="scales"><a href="#">Раскрой</a>
+                              <form>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="Длина изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите длину изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="Ширина изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите ширину изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="Высота изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите высоту изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group  row mb-2">
+                                  <div class="col-sm-8">
+                                    <select class="custom-select">
+                                      <option selected>Материал изделия</option>
+                                      <option value="1">Железо</option>
+                                      <option value="2">Аллюминий</option>
+                                      <option value="3">Титан</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="scales" name="scales"><a href="#">Обработка</a>
+                              <form>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="Длина изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите длину изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="Ширина изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите ширину изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group row mb-2">
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="Высота изделия">
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                      Введите высоту изделия в <strong>миллиметрах</strong>
+                                    </small>
+                                  </div>
+                                </div>
+                                <div class="form-group  row mb-2">
+                                  <div class="col-sm-8">
+                                    <select class="custom-select">
+                                      <option selected>...</option>
+                                      <option value="1">Железо</option>
+                                      <option value="2">Аллюминий</option>
+                                      <option value="3">Титан</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i class="fa fa-plus" aria-hidden="true"></i><a href="#">Деревообработка</a>
+                      <ul class="collapsed">
+                        <li>
+                          <i class="fa fa-plus" aria-hidden="true"></i><a href="#">Плоский прокат</a>
+                          <ul class="collapsed">
+                            <li>
+                              <input type="checkbox" id="scales" name="scales"><a href="#">Деформация</a>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="scales" name="scales"><a href="#">Раскрой</a>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="scales" name="scales"><a href="#">Обработка</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
                 <div class="button mt-5">
-                  <button type="button" name="button" class="btn btn-primary  btn-block" data-toggle="collapse" data-target="#step3">Следующий шаг</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col step">
-              <div class="counter">
-                03.
-              </div>
-              <div class="header">
-                <h4 class="text-secondary">Написать исполнителю</h4>
-              </div>
-              <div class="collapse" id="step3">
-                <div class="content">
-                  <div class="form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Сообщение исполнителю"></textarea>
-                  </div>
-                  <div class="button mt-5">
-                    <button type="button" name="button" class="btn btn-success  btn-block">Отправить</button>
-                  </div>
+                  <button type="button" name="button" class="btn btn-success  btn-block" data-toggle="collapse" data-target="#step3">Добавить</button>
                 </div>
               </div>
             </div>
@@ -190,12 +305,114 @@
         </div>
         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
           <div class="col">
-            2
+            <div class="card mb-3">
+              <h5 class="card-header">Станок токарно-винторезный универсальный 1М63</h5>
+
+              <div class="card-body">
+                <h6 class="card-title">Основные параметры:</h6>
+                <dl class="row">
+                  <dt class="col-sm-2"><small class="text-muted">Количество:</small></dt>
+                  <dd class="col-sm-10">
+                    <p class="card-text"><small>37 ед.</small></p>
+                  </dd>
+                  <dt class="col-sm-2"><small class="text-muted">Ставка:</small></dt>
+                  <dd class="col-sm-10">
+                    <p class="card-text"><small>18700 рублей/ч.</small></p>
+                  </dd>
+                </dl>
+                <h6 class="card-title">Категории:</h6>
+                <ul>
+                  <li>Металлообработка / плоский прокат / обработка</li>
+                  <li>Металлообработка / плоский прокат / раскрой</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Редактировать</a>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <h5 class="card-header">Станок токарно-винторезный универсальный 1В55</h5>
+
+              <div class="card-body">
+                <h6 class="card-title">Основные параметры:</h6>
+                <dl class="row">
+                  <dt class="col-sm-2"><small class="text-muted">Количество:</small></dt>
+                  <dd class="col-sm-10">
+                    <p class="card-text"><small>37 ед.</small></p>
+                  </dd>
+                  <dt class="col-sm-2"><small class="text-muted">Ставка:</small></dt>
+                  <dd class="col-sm-10">
+                    <p class="card-text"><small>18700 рублей/ч.</small></p>
+                  </dd>
+                </dl>
+                <h6 class="card-title">Категории:</h6>
+                <ul>
+                  <li>Металлообработка / плоский прокат / обработка</li>
+                  <li>Металлообработка / плоский прокат / раскрой</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Редактировать</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
           <div class="col">
-            3
+            <div>
+              <div class="card mb-3 mt-4 border-0 factorys">
+                <div class=" row no-gutters">
+                  <div class="col-md-8">
+                    <div class="card-body py-0">
+                      <h5 class="card-title">Приборный завод</h5>
+                      <dl class="row">
+                        <dt class="col-sm-2"><small class="text-muted">Адрес:</small></dt>
+                        <dd class="col-sm-10">
+                          <p class="card-text"><small>391000, г.Рязань, р-он Южный промузел , д.6, стр.1 офис1</small></p>
+                        </dd>
+                        <dt class="col-sm-2"><small class="text-muted">ИНН:</small></dt>
+                        <dd class="col-sm-10">
+                          <p class="card-text"><small>123457895</small></p>
+                        </dd>
+                        <dt class="col-sm-2"><small class="text-muted">Телефон:</small></dt>
+                        <dd class="col-sm-10">
+                          <p class="card-text"><small>+7 9421 58 86 48</small></p>
+                        </dd>
+                        <dt class="col-sm-2"><small class="text-muted">E-mail:</small></dt>
+                        <dd class="col-sm-10">
+                          <p class="card-text"><small>example@mail.com</small></p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <img style="object-fit: contain;     height: 100%;" src="http://expert.ru/data/public/516455/516465/00000000000000000000000000000000000000000000000000.jpg" class="card-img" alt="...">
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <div class="card mb-3 mt-0 border-0 factorys">
+                      <div class="card-body py-0">
+                        <h5>Детали заявки</h5>
+                        <h6>Описание:</h6>
+                        <p>
+                          Токарно-винторезный станок 1м63 предназначен для выполнения различных токарных работ. На станке можно производить наружное и внутреннее точение, включая точение конусов, растачивание, сверление и нарезание метрической,
+                          модульной, дюймовой и питчевой резьб. Обрабатываемые детали устанавливаются в центрах или патроне.
+                        </p>
+                        <h6>Требуемые мощности:</h6>
+                        <ul>
+                          <li>Станок токарно-винторезный универсальный 1М63</li>
+                          <li>Станок токарно-винторезный универсальный 1В55</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-success col" name="button">Принять</button>
+                  <div class="col-1">
+
+                  </div>
+                  <button type="button" class="btn btn-danger col" name="button">Отклонить</button>
+                </div>
+              </div>
+              <hr />
+            </div>
           </div>
         </div>
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
