@@ -1,0 +1,11 @@
+{
+  "name": "asset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "node-sass --watch sass/main.sass style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
