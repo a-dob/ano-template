@@ -152,7 +152,30 @@
             </div>
             <div class="collapse" id="step2">
               <div class="content">
-
+                <p>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Фильтр +
+                  </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Название предприятия</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите название">
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Предприятие является государственным</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Работа связана с государственным оборонным заказом</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Показать</button>
+                    </form>
+                  </div>
+                </div>
                 <div class="card mb-3 mt-4 border-0 factory">
                   <div class=" row no-gutters">
                     <div class="col-md-8">
